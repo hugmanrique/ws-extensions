@@ -1,0 +1,43 @@
+{
+  "name": "@hugmanrique/ws-extensions",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Sec-WebSocket-Extensions header parser and serializer",
+  "keywords": ["websocket", "extensions", "parser", "header"],
+  "homepage": "https://github.com/hugmanrique/ws-extensions",
+  "bugs": {
+    "url": "https://github.com/hugmanrique/ws-extensions/issues"
+  },
+  "author": {
+    "name": "Hugo Manrique",
+    "url": "https://hugmanrique.me",
+    "email": "npm@hugmanrique.me"
+  },
+  "files": ["dist/", "README.md", "LICENSE"],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugmanrique/ws-extensions"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "babel src -d dist",
+    "prepublish": "npm run prebuild && npm run build",
+    "clean": "del-cli dist",
+    "release": "standard-version",
+    "watch": "npm run build -- -w"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^6.26.0",
+    "coveralls": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.19.1",
+    "standard-version": "^4.3.0"
+  }
+}
