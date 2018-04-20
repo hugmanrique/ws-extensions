@@ -78,7 +78,7 @@ export function parse(header) {
 /**
  * Serializes the params of an offer
  * @param {String} The name of the parameter
- * @param {Object} The different offers
+ * @param {(Object|Map)} The params of the offer
  * @return {String} A string representing the given object
  */
 export function serialize(name, params) {
@@ -96,8 +96,15 @@ export function serialize(name, params) {
     values.push(`${key}=${value}`);
   };
 
-  for (const [key, value] of params) {
-    print(key, value);
+  if (params instanceof Map) {
+    for (const [key, value] of params) {
+      print(key, value);
+    }
+  } else {
+    // Assume it's an object
+    Object.keys(params).forEach(key => {
+      print(key, params[key]);
+    });
   }
 
   return values.join('; ');
