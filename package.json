@@ -1,9 +1,14 @@
 {
   "name": "@hugmanrique/ws-extensions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Sec-WebSocket-Extensions header parser and serializer",
-  "keywords": ["websocket", "extensions", "parser", "header"],
+  "keywords": [
+    "websocket",
+    "extensions",
+    "parser",
+    "header"
+  ],
   "homepage": "https://github.com/hugmanrique/ws-extensions",
   "bugs": {
     "url": "https://github.com/hugmanrique/ws-extensions/issues"
@@ -13,7 +18,11 @@
     "url": "https://hugmanrique.me",
     "email": "npm@hugmanrique.me"
   },
-  "files": ["dist/", "README.md", "LICENSE"],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "main": "dist/index.js",
   "repository": {
     "type": "git",
